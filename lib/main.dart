@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 //Providers
 import './providers/words.dart';
+import './providers/modals.dart';
 
 //Screens
 import './screens/main_screen.dart';
@@ -19,7 +20,10 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (_) => Words(),
-        )
+        ),
+        ChangeNotifierProvider(
+          create: (_) => Modals(),
+        ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

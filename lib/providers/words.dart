@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import './word.dart';
 
 class Words with ChangeNotifier {
-  final List<Word> words = [
+  final List<Word> _words = [
     Word(
         id: '1',
         infinitiveForm: InfinitiveForm(
@@ -63,7 +63,20 @@ class Words with ChangeNotifier {
         ]),
   ];
 
+  Word _selectedWord;
+
+  //Getters
   List<Word> get items {
-    return words;
+    return _words;
+  }
+
+  Word get selectedWord {
+    return _selectedWord;
+  }
+
+  // Methods
+  void selectWord(id) {
+    _selectedWord = _words.firstWhere((word) => word.id == id);
+    notifyListeners();
   }
 }
