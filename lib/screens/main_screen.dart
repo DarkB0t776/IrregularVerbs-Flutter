@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../providers/words.dart';
 import '../widgets/headers/main_header.dart';
 import '../widgets/rows/forms_row.dart';
+import '../widgets/columns/words_column.dart';
 
 class MainScreen extends StatelessWidget {
   static const routeName = 'MainScreen';
@@ -20,6 +21,7 @@ class MainScreen extends StatelessWidget {
         child: Column(
           children: [
             FormsRow(),
+            WordsColumn(words),
           ],
         ),
       ),

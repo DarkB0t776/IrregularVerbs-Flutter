@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class FormsRow extends StatelessWidget {
-  final Color color = const Color(0xff941a12);
-
   @override
   Widget build(BuildContext context) {
+    const Color color = const Color(0xff941a12);
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
