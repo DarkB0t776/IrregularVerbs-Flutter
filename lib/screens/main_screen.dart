@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/words.dart';
+import '../widgets/headers/main_header.dart';
+import '../widgets/rows/forms_row.dart';
 
 class MainScreen extends StatelessWidget {
   static const routeName = 'MainScreen';
@@ -12,9 +14,13 @@ class MainScreen extends StatelessWidget {
     final words = wordsData.items;
 
     return Scaffold(
+      appBar: MainHeader(),
       body: Container(
-        child: Center(
-          child: Text(words[0].infinitiveForm.word),
+        padding: EdgeInsets.all(20),
+        child: Column(
+          children: [
+            FormsRow(),
+          ],
         ),
       ),
     );
