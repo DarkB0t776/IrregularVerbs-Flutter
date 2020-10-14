@@ -5,6 +5,7 @@ import '../../providers/words.dart';
 import '../rows/modal_actions_row.dart';
 import '../rows/colors_row.dart';
 import '../rows/transcript_row.dart';
+import '../rows/sound_row.dart';
 
 class WordModal extends StatelessWidget {
   @override
@@ -27,6 +28,7 @@ class WordModal extends StatelessWidget {
                 ModalActionsRow(),
                 ColorsRow(selectedWord.color, selectedWord.id),
                 TranscriptRow(selectedWord),
+                SoundRow(selectedWord),
               ],
             ),
           ),
