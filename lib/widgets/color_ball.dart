@@ -13,9 +13,9 @@ class ColorBall extends StatelessWidget {
   });
 
   Widget renderCheckIcon() {
-    if (wordColor == customColor) {
-      return Center(child: Icon(MaterialCommunityIcons.check_outline));
-    }
+    return wordColor == customColor
+        ? Center(child: Icon(MaterialCommunityIcons.check_outline))
+        : null;
   }
 
   @override

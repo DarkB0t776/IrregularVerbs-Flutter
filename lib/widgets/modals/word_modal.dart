@@ -6,6 +6,7 @@ import '../rows/modal_actions_row.dart';
 import '../rows/colors_row.dart';
 import '../rows/transcript_row.dart';
 import '../rows/sound_row.dart';
+import '../columns/text_column.dart';
 
 class WordModal extends StatelessWidget {
   @override
@@ -22,14 +23,31 @@ class WordModal extends StatelessWidget {
               color: Colors.yellow,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                ModalActionsRow(),
-                ColorsRow(selectedWord.color, selectedWord.id),
-                TranscriptRow(selectedWord),
-                SoundRow(selectedWord),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ModalActionsRow(),
+                  ColorsRow(selectedWord.color, selectedWord.id),
+                  TranscriptRow(selectedWord),
+                  SoundRow(selectedWord),
+                  Text(
+                    selectedWord.uaTranslate.join(', '),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.blue[900], fontWeight: FontWeight.bold),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    child: Image(
+                        image: AssetImage(selectedWord.image),
+                        width: 100,
+                        height: 150),
+                  ),
+                  TextColumn('Definition', selectedWord.definition),
+                  TextColumn('Examples', selectedWord.examples.join('\n')),
+                ],
+              ),
             ),
           ),
         ));

@@ -48,6 +48,7 @@ class Word {
   final String definition;
   final List<String> uaTranslate;
   final List<String> examples;
+  final String image;
   Color color;
   int stars;
   int practiced;
@@ -63,6 +64,7 @@ class Word {
       @required this.definition,
       @required this.uaTranslate,
       @required this.examples,
+      @required this.image,
       this.color = Colors.white,
       this.stars = 0,
       this.practiced = 0,

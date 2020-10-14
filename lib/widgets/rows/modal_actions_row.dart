@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
-import '../../screens/main_screen.dart';
-
 class ModalActionsRow extends StatelessWidget {
   final double size = 30.0;
 
