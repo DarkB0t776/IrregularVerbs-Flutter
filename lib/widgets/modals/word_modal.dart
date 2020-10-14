@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../../providers/words.dart';
 import '../rows/modal_actions_row.dart';
+import '../rows/colors_row.dart';
 
 class WordModal extends StatelessWidget {
   @override
@@ -14,6 +15,7 @@ class WordModal extends StatelessWidget {
         child: Expanded(
           flex: 1,
           child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 5.0),
             decoration: BoxDecoration(
               color: Colors.yellow,
               borderRadius: BorderRadius.circular(10),
@@ -22,6 +24,7 @@ class WordModal extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 ModalActionsRow(),
+                ColorsRow(selectedWord.color, selectedWord.id),
               ],
             ),
           ),

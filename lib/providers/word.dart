@@ -48,12 +48,12 @@ class Word with ChangeNotifier {
   final String definition;
   final List<String> uaTranslate;
   final List<String> examples;
-  final Color color;
-  final int stars;
-  final int practiced;
-  final int fail;
-  final int skipped;
-  final int passed;
+  Color color;
+  int stars;
+  int practiced;
+  int fail;
+  int skipped;
+  int passed;
 
   Word(
       {@required this.id,

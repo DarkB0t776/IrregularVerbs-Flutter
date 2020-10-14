@@ -79,4 +79,10 @@ class Words with ChangeNotifier {
     _selectedWord = _words.firstWhere((word) => word.id == id);
     notifyListeners();
   }
+
+  void changeWordColor(Color newColor, String id) {
+    int idx = _words.indexWhere((word) => word.id == id);
+    _words[idx].color = newColor;
+    notifyListeners();
+  }
 }
