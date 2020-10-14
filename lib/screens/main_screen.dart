@@ -16,6 +16,7 @@ class MainScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: MainHeader(),
+      backgroundColor: Colors.white,
       body: Container(
         padding: EdgeInsets.all(20),
         child: Column(

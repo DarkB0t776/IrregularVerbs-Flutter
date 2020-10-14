@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../providers/word.dart';
+import '../../models/word.dart';
 import '../../providers/words.dart';
 import '../modals/word_modal.dart';
 
@@ -27,59 +27,66 @@ class WordRow extends StatelessWidget {
         showDialog(
             context: context, builder: (BuildContext context) => WordModal());
       },
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                  child: Container(
-                decoration: BoxDecoration(
-                    border:
-                        Border(right: BorderSide(width: 1, color: Colors.red))),
-                child: Center(
-                  child: Text(
-                    word.infinitiveForm.word,
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-              )),
-              Expanded(
-                  child: Container(
-                decoration: BoxDecoration(
-                    border:
-                        Border(right: BorderSide(width: 1, color: Colors.red))),
-                child: Center(
-                  child: Text(
-                    word.pastSimpleForm.word,
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-              )),
-              Expanded(
-                child: Container(
+      child: Container(
+        decoration: BoxDecoration(
+          color: word.color,
+          borderRadius: BorderRadius.circular(5.0),
+        ),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                    child: Container(
+                  decoration: BoxDecoration(
+                      border: Border(
+                          right: BorderSide(width: 1, color: Colors.red))),
                   child: Center(
                     child: Text(
-                      word.pastPerfectForm.word,
+                      word.infinitiveForm.word,
                       style: TextStyle(
                           fontSize: 16,
                           fontStyle: FontStyle.italic,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
+                )),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                        border: Border(
+                            right: BorderSide(width: 1, color: Colors.red))),
+                    child: Center(
+                      child: Text(
+                        word.pastSimpleForm.word,
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontStyle: FontStyle.italic,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ],
-          ),
-          renderTranslate(),
-          SizedBox(height: 10)
-        ],
+                Expanded(
+                  child: Container(
+                    child: Center(
+                      child: Text(
+                        word.pastPerfectForm.word,
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontStyle: FontStyle.italic,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            renderTranslate(),
+            SizedBox(height: 10)
+          ],
+        ),
       ),
     );
   }

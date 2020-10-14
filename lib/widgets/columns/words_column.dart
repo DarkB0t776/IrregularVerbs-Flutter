@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../providers/word.dart';
+import '../../models/word.dart';
 import '../rows/word_row.dart';
 
 class WordsColumn extends StatelessWidget {

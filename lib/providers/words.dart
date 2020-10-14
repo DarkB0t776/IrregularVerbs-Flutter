@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './word.dart';
+import '../models/word.dart';
 
 class Words with ChangeNotifier {
   final List<Word> _words = [

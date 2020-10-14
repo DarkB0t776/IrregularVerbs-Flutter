@@ -40,7 +40,7 @@ class PastPerfectForm {
       this.wrong = 0});
 }
 
-class Word with ChangeNotifier {
+class Word {
   final String id;
   final InfinitiveForm infinitiveForm;
   final PastSimpleForm pastSimpleForm;
