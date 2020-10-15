@@ -7,11 +7,11 @@ class Words with ChangeNotifier {
     Word(
       id: '1',
       infinitiveForm: InfinitiveForm(
-          word: 'abide', transcript: '/əˈbʌɪd/', audio: 'abide1.mp3'),
+          word: 'abide', transcript: '/əˈbʌɪd/', audio: 'abide.mp3'),
       pastSimpleForm: PastSimpleForm(
-          word: 'abode', transcript: '/əˈbəʊd/', audio: 'abode2.mp3'),
+          word: 'abode', transcript: '/əˈbəʊd/', audio: 'abode.mp3'),
       pastPerfectForm: PastPerfectForm(
-          word: 'abode', transcript: '/əˈbəʊd/', audio: 'abode3.mp3'),
+          word: 'abode', transcript: '/əˈbəʊd/', audio: 'abode.mp3'),
       definition:
           'to accept or bear (someone or something bad, unpleasant, etc.); to remain, continue, stay',
       uaTranslate: ['терпіти', 'дотримуватися', 'перебувати'],
@@ -43,11 +43,11 @@ class Words with ChangeNotifier {
     Word(
       id: '3',
       infinitiveForm: InfinitiveForm(
-          word: 'awake', transcript: '/əˈweɪk/', audio: 'abide1.mp3'),
+          word: 'awake', transcript: '/əˈweɪk/', audio: 'abide.mp3'),
       pastSimpleForm: PastSimpleForm(
-          word: 'awoke', transcript: '/əˈwəʊk/', audio: 'abode2.mp3'),
+          word: 'awoke', transcript: '/əˈwəʊk/', audio: 'abode.mp3'),
       pastPerfectForm: PastPerfectForm(
-          word: 'awoken', transcript: '/əˈwəʊk(ə)n/', audio: 'abode3.mp3'),
+          word: 'awoken', transcript: '/əˈwəʊk(ə)n/', audio: 'abode.mp3'),
       definition: 'to stop sleeping; to wake up',
       uaTranslate: ['будити', 'прокидатися'],
       examples: [
